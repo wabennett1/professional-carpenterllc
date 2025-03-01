@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Carpenter LLC</title>
+    <title>My Company</title>
     <style>
         body { margin: 0; font-family: Arial, sans-serif; }
+        .nav {
+            background: #333;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .nav .logo {
+            width: 120px; /* Adjust logo size */
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        .nav-links a:hover {
+            background: #555;
+        }
         .hero {
             background: url('hero-image.jpg') no-repeat center center/cover;
             height: 100vh;
@@ -17,19 +46,32 @@
             font-size: 2em;
             font-weight: bold;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            margin-top: 80px;
         }
         .content { padding: 40px; text-align: center; }
-        .logo { width: 150px; }
         .gallery img { width: 100%; max-width: 400px; margin: 10px; }
         .contact { background: #333; color: white; padding: 20px; text-align: center; }
     </style>
 </head>
 <body>
-    <div class="hero">Welcome to My Company</div>
-    <div class="content">
+    <div class="nav">
         <img src="logo.png" alt="Company Logo" class="logo">
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#work">Our Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    
+    <div class="hero" id="home">Welcome to My Company</div>
+    
+    <div class="content" id="about">
         <h2>About Us</h2>
         <p>We provide quality craftsmanship and professional services for all your needs.</p>
+    </div>
+    
+    <div class="content" id="work">
         <h2>Our Work</h2>
         <div class="gallery">
             <img src="image1.jpg" alt="Project 1">
@@ -37,10 +79,11 @@
             <img src="image3.jpg" alt="Project 3">
         </div>
     </div>
-    <div class="contact">
+    
+    <div class="contact" id="contact">
         <h2>Contact Us</h2>
-        <p>Email: wabennett1@yahoo.com </p>
-        <p>Phone: (404) 914-5085</p>
+        <p>Email: contact@mycompany.com</p>
+        <p>Phone: (123) 456-7890</p>
     </div>
 </body>
 </html>
