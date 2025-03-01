@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Carpentry LLC</title>
+    <title>My Company</title>
     <style>
-        body { margin: 0; font-family: Arial, sans-serif; }
+        body { margin: 0; font-family: 'Arial', sans-serif; background: #f4f4f4; }
         .nav {
-            background: #808080;
+            background: #1e4d2b; /* Dark Green from logo */
             padding: 15px;
             position: fixed;
             width: 100%;
@@ -20,7 +20,7 @@
             padding: 10px 20px;
         }
         .nav .logo {
-            width: 160px; /* Adjust logo size */
+            width: 120px;
         }
         .nav-links {
             display: flex;
@@ -33,7 +33,7 @@
             display: inline-block;
         }
         .nav-links a:hover {
-            background: #555;
+            background: #2d6a4f;
         }
         .hero {
             background: url('hero-image.jpg') no-repeat center center/cover;
@@ -48,7 +48,7 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
             margin-top: 80px;
         }
-        .content { padding: 40px; text-align: center; }
+        .content { padding: 40px; text-align: center; color: #1e4d2b; }
         .gallery {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -61,37 +61,32 @@
             height: 200px;
             object-fit: cover;
             border-radius: 5px;
-        }
-        .contact { background: #333; color: white; padding: 20px; text-align: center; }
-        .quote-form {
-            background: #f4f4f4;
-            padding: 30px;
-            margin: 20px auto;
-            width: 50%;
-            border-radius: 10px;
-        }
-        .quote-form label {
-            display: block;
-            margin-top: 10px;
-        }
-        .quote-form input, .quote-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .quote-form button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
             cursor: pointer;
         }
-        .quote-form button:hover {
-            background: #555;
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        .contact {
+            background: #1e4d2b; /* Dark Green from logo */
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -116,46 +111,19 @@
     <div class="content" id="work">
         <h2>Our Work</h2>
         <div class="gallery">
-            <img src="image1.jpg" alt="Project 1">
-            <img src="image2.jpg" alt="Project 2">
-            <img src="image3.jpg" alt="Project 3">
-            <img src="image4.jpg" alt="Project 4">
-            <img src="image5.jpg" alt="Project 5">
-            <img src="image6.jpg" alt="Project 6">
-            <img src="image7.jpg" alt="Project 7">
-            <img src="image8.jpg" alt="Project 8">
-            <img src="image9.jpg" alt="Project 9">
-            <img src="image10.jpg" alt="Project 10">
-            <img src="image11.jpg" alt="Project 11">
-            <img src="image12.jpg" alt="Project 12">
+            <a href="#lightbox1"><img src="image1.jpg" alt="Project 1"></a>
+            <a href="#lightbox2"><img src="image2.jpg" alt="Project 2"></a>
+            <a href="#lightbox3"><img src="image3.jpg" alt="Project 3"></a>
+            <a href="#lightbox4"><img src="image4.jpg" alt="Project 4"></a>
+            <a href="#lightbox5"><img src="image5.jpg" alt="Project 5"></a>
+            <a href="#lightbox6"><img src="image6.jpg" alt="Project 6"></a>
+            <a href="#lightbox7"><img src="image7.jpg" alt="Project 7"></a>
+            <a href="#lightbox8"><img src="image8.jpg" alt="Project 8"></a>
+            <a href="#lightbox9"><img src="image9.jpg" alt="Project 9"></a>
+            <a href="#lightbox10"><img src="image10.jpg" alt="Project 10"></a>
+            <a href="#lightbox11"><img src="image11.jpg" alt="Project 11"></a>
+            <a href="#lightbox12"><img src="image12.jpg" alt="Project 12"></a>
         </div>
-    </div>
-    
-    <div class="content" id="quote">
-        <h2>Request a Quote</h2>
-        <form class="quote-form">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="address">Full Address:</label>
-            <input type="text" id="address" name="address" required>
-            
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="description">Project Description:</label>
-            <textarea id="description" name="description" rows="4" required></textarea>
-            
-            <label>Services Needed:</label>
-            <input type="checkbox" name="services" value="Painting"> Painting<br>
-            <input type="checkbox" name="services" value="Cabinet Painting"> Cabinet Painting<br>
-            <input type="checkbox" name="services" value="Banister Painting"> Banister Painting<br>
-            <input type="checkbox" name="services" value="Trim Painting"> Trim Painting<br>
-            <input type="checkbox" name="services" value="Pressure Washing"> Pressure Washing<br>
-            <input type="checkbox" name="services" value="Other"> Other<br>
-            
-            <button type="submit">Submit</button>
-        </form>
     </div>
     
     <div class="contact" id="contact">
@@ -165,4 +133,3 @@
     </div>
 </body>
 </html>
-
