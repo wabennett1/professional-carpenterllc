@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Carpenter LLC</title>
+    <title>My Company</title>
     <style>
         body { margin: 0; font-family: 'Arial', sans-serif; background: #1e4d2b; color: white; }
         .nav {
@@ -67,6 +67,18 @@
             background: #e0e0e0;
         }
         .content { padding: 40px; text-align: center; }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
         .contact {
             background: white;
             color: #1e4d2b;
@@ -89,7 +101,7 @@
     </div>
     
     <div class="hero" id="home">
-        Professional Carpenter LLC
+        Welcome to My Company
         <div class="hero-buttons">
             <a href="#contact">Give Us A Call</a>
             <a href="#quote">Get An Instant Quote</a>
@@ -98,34 +110,27 @@
     
     <div class="content" id="about">
         <h2>About Us</h2>
-        <p>We provide quality craftsmanship and professional services for all your needs. Serving Griffin, CA and surrounding areas. </p>
+        <p>We provide quality craftsmanship and professional services for all your needs.</p>
+    </div>
+    
+    <div class="content" id="work">
+        <h2>Our Work</h2>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Project 1">
+            <img src="image2.jpg" alt="Project 2">
+            <img src="image3.jpg" alt="Project 3">
+            <img src="image4.jpg" alt="Project 4">
+            <img src="image5.jpg" alt="Project 5">
+            <img src="image6.jpg" alt="Project 6">
+            <img src="image7.jpg" alt="Project 7">
+            <img src="image8.jpg" alt="Project 8">
+            <img src="image9.jpg" alt="Project 9">
+        </div>
     </div>
     
     <div class="content" id="quote">
         <h2>Request a Quote</h2>
-        <form class="quote-form">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="address">Full Address:</label>
-            <input type="text" id="address" name="address" required>
-            
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="description">Project Description:</label>
-            <textarea id="description" name="description" rows="4" required></textarea>
-            
-            <label>Services Needed:</label>
-            <input type="checkbox" name="services" value="Painting"> Painting<br>
-            <input type="checkbox" name="services" value="Cabinet Painting"> Cabinet Painting<br>
-            <input type="checkbox" name="services" value="Banister Painting"> Banister Painting<br>
-            <input type="checkbox" name="services" value="Trim Painting"> Trim Painting<br>
-            <input type="checkbox" name="services" value="Pressure Washing"> Pressure Washing<br>
-            <input type="checkbox" name="services" value="Other"> Other<br>
-            
-            <button type="submit">Submit</button>
-        </form>
+        <iframe src="YOUR_GOOGLE_FORM_LINK_HERE" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
     </div>
     
     <div class="contact" id="contact">
