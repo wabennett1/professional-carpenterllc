@@ -112,3 +112,8 @@ body { margin: 0; font-family: 'Arial', sans-serif; background: #1e4d2b; color: 
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+        .ul
+        {
+            text-align: left; 
+            display: inline-block;    
+        }
