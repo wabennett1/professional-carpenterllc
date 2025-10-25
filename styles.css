@@ -153,3 +153,4 @@ img, video { max-width: 100%; height: auto; }
   min-height: 100dvh;  /* modern Safari/Chrome */
   min-height: 100svh;  /* small viewport unit */
 }
+body { outline: 4px solid red !important; }
