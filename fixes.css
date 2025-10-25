@@ -24,3 +24,4 @@ img, video {
 .full-bleed, .page-wrapper, .section {
   width: 100%;
 }
+body{outline:4px solid red!important}
