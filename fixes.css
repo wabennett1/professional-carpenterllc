@@ -70,3 +70,20 @@ h1, h2, h3, h4, h5, h6 {
   color: #2f8f2f;
   font-weight: 600;
 }
+/* --- Hero section text color fix --- */
+.hero,
+.hero h1,
+.hero h2,
+.hero-subtext {
+  color: #ffffff !important;
+}
+
+.hero a {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.hero a:hover {
+  background: #ffffff;
+  color: #2f8f2f; /* optional: green accent when hovered */
+}
