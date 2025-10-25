@@ -30,3 +30,25 @@ img, video {
 .full-bleed, .page-wrapper, .section, [style*="100vw"] {
   width: 100% !important;
 }
+/* --- Compact header adjustments --- */
+.nav {
+  padding: 6px 16px;           /* reduces vertical + horizontal spacing */
+}
+
+.nav a {
+  font-size: 0.95rem;          /* slightly smaller text */
+  line-height: 1.2;            /* tighter line spacing */
+  margin: 0 8px;               /* closer links together */
+}
+
+.logo {
+  max-height: 40px;            /* shrink logo image */
+  margin-right: 8px;           /* small gap between logo and links */
+  vertical-align: middle;      /* keeps logo aligned with text */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
