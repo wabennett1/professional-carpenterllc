@@ -60,3 +60,13 @@ img, video {
     max-height: 32px;
   }
 }
+/* --- Restore brand green for headings and section titles --- */
+h1, h2, h3, h4, h5, h6 {
+  color: #2f8f2f;   /* replace with your exact shade of green if different */
+}
+
+/* Optional: emphasize section titles */
+.content h2, .content h3 {
+  color: #2f8f2f;
+  font-weight: 600;
+}
