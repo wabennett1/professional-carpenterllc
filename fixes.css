@@ -4,6 +4,22 @@
   top: 0 !important;
   z-index: 1000;
   background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* Compact nav spacing (desktop default) */
+.nav {
+  padding: 8px 16px;
+}
+.nav a {
+  font-size: 0.95rem;
+  line-height: 1.2;
+  margin: 0 8px;
+}
+.logo {
+  max-height: 40px;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 /* Safety: avoid horizontal white gutters */
@@ -12,11 +28,11 @@ html, body {
   overflow-x: hidden;
 }
 
-/* iOS vh fix for hero height so URL bar changes don't create gaps */
+/* Hero section height fix for mobile (avoids 100vh bug) */
 .hero {
   min-height: 100vh;   /* fallback */
   min-height: 100dvh;  /* dynamic viewport on modern mobile browsers */
-  min-height: 100svh;  /* small viewport unit as extra fallback */
+  min-height: 100svh;  /* small viewport unit fallback */
 }
 
 /* Media fit: keep images from causing overflow */
@@ -30,72 +46,17 @@ img, video {
 .full-bleed, .page-wrapper, .section, [style*="100vw"] {
   width: 100% !important;
 }
-/* --- Compact header adjustments --- */
-.nav {
-  padding: 6px 16px;           /* reduces vertical + horizontal spacing */
-}
 
-.nav a {
-  font-size: 0.95rem;          /* slightly smaller text */
-  line-height: 1.2;            /* tighter line spacing */
-  margin: 0 8px;               /* closer links together */
-}
-
-.logo {
-  max-height: 40px;            /* shrink logo image */
-  margin-right: 8px;           /* small gap between logo and links */
-  vertical-align: middle;      /* keeps logo aligned with text */
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-/* --- Semantic header, sticky, no overlap --- */
-header.nav, .nav {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1000;
-  background: #fff;
-  border: 0 !important;           /* kill any top border (green line) */
-  outline: 0 !important;
-  box-shadow: 0 1px 4px rgba(0,0,0,.06);
-  padding: 8px 16px;               /* desktop/base padding */
-}
-
-/* NAV links & logo defaults */
-.nav-links { display: flex; align-items: center; flex-wrap: wrap; }
-.nav a { text-decoration: none; }
-.nav a + a { margin-left: 12px; }
-.logo { max-height: 44px; vertical-align: middle; display: inline-block; }
-
-/* General safety */
-html, body { margin: 0; overflow-x: hidden; background: #fff; }
-img, video { display: block; max-width: 100%; height: auto; }
-
-/* --- Mobile: compact header --- */
+/* --- Mobile: more compact header spacing --- */
 @media (max-width: 768px) {
-  header.nav { 
-    padding: max(6px, env(safe-area-inset-top)) 12px 6px;  /* account for notches */
+  .nav {
+    padding: 6px 12px;
   }
-  .logo { max-height: 36px; }
-  .nav a { 
-    font-size: 0.92rem; 
-    line-height: 1.2; 
-    margin: 0 6px 0 0;
+  .nav a {
+    font-size: 0.9rem;
+    margin: 0 6px;
   }
-  .nav a + a { margin-left: 6px; }
+  .logo {
+    max-height: 32px;
+  }
 }
-
-/* --- Extra-small phones: even tighter --- */
-@media (max-width: 400px) {
-  header.nav { padding: max(4px, env(safe-area-inset-top)) 10px 4px; }
-  .logo { max-height: 32px; }
-  .nav a { font-size: 0.88rem; }
-}
-
-/* If you previously added body top padding to avoid overlap, reduce it or remove it */
-@media (max-width: 768px) {
-  body { padding-top: 0 !important; }  /* remove if you see a gap; or set to a small value like 8px */
-}
-
