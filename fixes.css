@@ -1,3 +1,17 @@
+/* --- Sticky nav that scrolls with the page --- */
+.nav, body .nav, html body .nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000;
+  background: #fff;
+}
+
+/* Optional: push content down so nothing hides behind nav */
+body {
+  padding-top: 80px;   /* adjust if your nav height changes */
+  margin: 0;
+  overflow-x: hidden;
+}
 /* Sticky header that doesn't cover content */
 header,
 .site-header,
