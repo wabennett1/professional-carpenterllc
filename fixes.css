@@ -1,4 +1,4 @@
-/* --- Sticky nav that scrolls with the page --- */
+/* --- Sticky nav that scrolls with the page (no overlap) --- */
 .nav, body .nav, html body .nav {
   position: sticky !important;
   top: 0 !important;
@@ -6,9 +6,27 @@
   background: #fff;
 }
 
-/* Optional: push content down so nothing hides behind nav */
-body {
-  padding-top: 80px;   /* adjust if your nav height changes */
+/* Safety: avoid horizontal white gutters */
+html, body {
   margin: 0;
   overflow-x: hidden;
+}
+
+/* iOS vh fix for hero height so URL bar changes don't create gaps */
+.hero {
+  min-height: 100vh;   /* fallback */
+  min-height: 100dvh;  /* dynamic viewport on modern mobile browsers */
+  min-height: 100svh;  /* small viewport unit as extra fallback */
+}
+
+/* Media fit: keep images from causing overflow */
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optional: if any wrappers used 100vw, keep them at 100% */
+.full-bleed, .page-wrapper, .section, [style*="100vw"] {
+  width: 100% !important;
 }
