@@ -139,3 +139,17 @@ body { margin: 0; font-family: 'Arial', sans-serif; background: #1e4d2b; color: 
             text-align: left; 
             display: inline-block;    
         }
+/* --- Mobile white bar fixes --- */
+html, body { overflow-x: hidden; }
+*, *::before, *::after { box-sizing: border-box; }
+img, video { max-width: 100%; height: auto; }
+
+/* If any wrappers/sections used 100vw, prefer 100% to avoid tiny overflow */
+.full-bleed, .page-wrapper, .section { width: 100%; }
+
+/* Replace 100vh gaps on iOS with dynamic viewport */
+.hero, .section--fullscreen {
+  min-height: 100vh;   /* fallback */
+  min-height: 100dvh;  /* modern Safari/Chrome */
+  min-height: 100svh;  /* small viewport unit */
+}
